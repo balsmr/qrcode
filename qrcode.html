@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -59,8 +59,8 @@
         </form>
     </div>
 
-    <!-- Ajout du fichier audio -->
-    <audio id="sirenSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+    <!-- Utilisation du fichier audio de sirène -->
+    <audio id="sirenSound" src="https://www.soundjay.com/switch/switch-1.mp3"></audio>
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
@@ -71,7 +71,7 @@
             audio.play();
 
             // Efface le formulaire et affiche un message
-            document.querySelector('.login-container').innerHTML = '<h2>Merci pour tes identifiants...</h2>';
+            document.querySelector('.login-container').innerHTML = '<h2>Nicolas et Bertrand te remercient...</h2>';
         });
     </script>
 </body>
